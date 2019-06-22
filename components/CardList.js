@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Card, CardItem, Text, Icon, Right, Badge, Left } from 'native-base';
-import LevelK from './LevelK';
+import {
+  Card,
+  CardItem,
+  Text,
+  Icon,
+  Right,
+  Badge,
+  Left,
+  Button,
+} from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 export default class CardListExample extends Component {
   render() {
@@ -19,7 +28,14 @@ export default class CardListExample extends Component {
             </Badge>
           </Left>
           <Right>
-            <Icon name="arrow-forward" />
+            <Button
+              transparent
+              onPress={() => {
+                Actions.LevelK();
+              }}
+            >
+              <Icon name="arrow-forward" />
+            </Button>
           </Right>
         </CardItem>
 

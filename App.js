@@ -1,41 +1,17 @@
 import React, { Component } from 'react';
-import { StyleSheet, Image, ImageBackground } from 'react-native';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text,
-} from 'native-base';
-import FooterTabsComp from './components/Footer';
-import CardListExample from './components/CardList';
-// import { Actions, Router, Scene } from 'react-native-router-flux';
+import LevelK from './components/LevelK';
+import { Router, Scene } from 'react-native-router-flux';
+import Home from './components/Home';
 
 export default class AnatomyExample extends Component {
   render() {
     return (
-      <Container>
-        <ImageBackground
-          source={require('./assets/bg.png')}
-          style={{ width: '100%', height: '100%' }}
-        >
-          <Content padder>
-            <CardListExample />
-          </Content>
-          <FooterTabsComp />
-        </ImageBackground>
-      </Container>
+      <Router>
+        <Scene key="root">
+          <Scene key="Home " component={Home} initial hideNavBar />
+          <Scene key="LevelK" component={LevelK} title="Level K" />
+        </Scene>
+      </Router>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  background: {},
-});
