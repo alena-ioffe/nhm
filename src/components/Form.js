@@ -11,15 +11,15 @@ import {
   Input,
   Label,
 } from 'native-base';
-import CountDown60 from './utils/CountDown';
+import CountDown60 from '../utils/CountDown';
 import { Actions } from 'react-native-router-flux';
 
 export default class FormGen extends Component {
   render() {
     return (
       <ImageBackground
-        source={require('../assets/bg.png')}
-        style={{ width: '100%', height: '100%' }}
+        source={require('../../assets/bg.png')}
+        style={styles.imgBg}
       >
         <Card style={styles.cardContainer}>
           <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
@@ -58,5 +58,9 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     marginRight: 30,
     marginTop: 100,
+  },
+  imgBg: {
+    width: '100%',
+    height: '100%',
   },
 });

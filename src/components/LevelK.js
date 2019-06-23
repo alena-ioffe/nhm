@@ -7,8 +7,8 @@ export default class LevelK extends Component {
   render() {
     return (
       <ImageBackground
-        source={require('../assets/bg.png')}
-        style={{ width: '100%', height: '100%' }}
+        source={require('../../assets/bg.png')}
+        style={styles.imgBg}
       >
         <Card style={styles.cardContainer}>
           <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
@@ -55,5 +55,9 @@ const styles = StyleSheet.create({
   buttonGo: {
     backgroundColor: '#BD64A7',
     margin: 20,
+  },
+  imgBg: {
+    width: '100%',
+    height: '100%',
   },
 });
