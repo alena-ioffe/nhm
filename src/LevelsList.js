@@ -9,6 +9,9 @@ import {
   Badge,
   Left,
   Button,
+  H1,
+  H2,
+  H3,
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -26,6 +29,7 @@ export default class LevelsList extends Component {
             <Badge primary style={styles.badgeLevels}>
               <Text>K</Text>
             </Badge>
+            <Text note>Doing what you . .</Text>
           </Left>
           <Right>
             <Button
@@ -60,7 +64,7 @@ export default class LevelsList extends Component {
 
         <CardItem bordered style={styles.levelList}>
           <Left>
-            <Text>Level</Text>
+            <H2>Level</H2>
             <Badge primary style={styles.badgeLevels}>
               <Text>2 </Text>
             </Badge>
@@ -100,9 +104,9 @@ export default class LevelsList extends Component {
 const styles = StyleSheet.create({
   badgeLevels: {
     marginLeft: 10,
-    fontSize: 20,
+    fontSize: 26,
     color: '#fff',
-    lineHeight: 24,
+    lineHeight: 26,
   },
   levelList: {
     paddingBottom: 20,

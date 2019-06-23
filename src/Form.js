@@ -25,8 +25,8 @@ export default class FormGen extends Component {
           <CardItem header bordered style={{ backgroundColor: '#59B8A5' }}>
             <Text style={styles.header}>Time : </Text>
             <CountDown
-              until={10}
-              onFinish={() => Actions.LevelK()}
+              until={5}
+              onFinish={() => Actions.Result()}
               digitStyle={{
                 backgroundColor: '#59B8A5',
                 borderWidth: 2,

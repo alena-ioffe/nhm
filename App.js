@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Scene } from 'react-native-router-flux';
-import { Home, LevelK, FormGen } from './src';
+import { Home, LevelK, FormGen, Result } from './src';
 
 export default class App extends Component {
   render() {
@@ -10,6 +10,7 @@ export default class App extends Component {
           <Scene key="Home " component={Home} initial hideNavBar />
           <Scene key="LevelK" component={LevelK} title="Level K" />
           <Scene key="FormGen" component={FormGen} title="Math" />
+          <Scene key="Result" component={Result} />
         </Scene>
       </Router>
     );
