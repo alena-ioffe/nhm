@@ -7,8 +7,7 @@ import {
   Left,
   Button,
   Container,
-  H1,
-  H2,
+  Title,
   H3,
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
@@ -35,7 +34,7 @@ export default class Result extends Component {
             </CardItem>
             <CardItem bordered style={styles.levelList}>
               <Left>
-                <Text>Total Points: 50</Text>
+                <Title>Total Points: 50</Title>
               </Left>
             </CardItem>
             <Button

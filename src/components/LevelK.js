@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ImageBackground, StyleSheet } from 'react-native';
-import { Card, CardItem, Text, Left, Button } from 'native-base';
+import { Card, CardItem, Text, H3, Left, Button } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 export default class LevelK extends Component {
@@ -17,7 +17,7 @@ export default class LevelK extends Component {
 
           <CardItem bordered style={styles.levelList}>
             <Left>
-              <Text>You can do it. You have One minute</Text>
+              <H3>You can do it! You have 1 minute</H3>
             </Left>
           </CardItem>
           <CardItem style={styles.levelList} />

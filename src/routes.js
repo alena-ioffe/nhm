@@ -5,6 +5,7 @@ import { Home, LevelK, FormGen, Result, Login } from './components/index';
 import { Icon } from 'native-base';
 
 export default class Routes extends Component {
+  
   render() {
     return (
       <Router>
