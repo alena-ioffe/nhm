@@ -25,11 +25,11 @@ export default class LevelsList extends Component {
 
         <CardItem bordered style={styles.levelList}>
           <Left>
-            <Text>Level</Text>
-            <Badge primary style={styles.badgeLevels}>
+            <H2>Level</H2>
+            <Badge info style={styles.badgeLevels}>
               <Text>K</Text>
             </Badge>
-            <Text note>Doing what you . .</Text>
+            <Text note>within 0 - 10</Text>
           </Left>
           <Right>
             <Button
@@ -45,16 +45,17 @@ export default class LevelsList extends Component {
 
         <CardItem bordered style={styles.levelList}>
           <Left>
-            <Text>Level</Text>
-            <Badge primary style={styles.badgeLevels}>
+            <H2>Level</H2>
+            <Badge info style={styles.badgeLevels}>
               <Text>1 </Text>
             </Badge>
+            <Text note>within 0 - 20</Text>
           </Left>
           <Right>
             <Button
               transparent
               onPress={() => {
-                Actions.FormGen();
+                Actions.LevelK();
               }}
             >
               <Icon name="arrow-forward" />
@@ -65,9 +66,10 @@ export default class LevelsList extends Component {
         <CardItem bordered style={styles.levelList}>
           <Left>
             <H2>Level</H2>
-            <Badge primary style={styles.badgeLevels}>
+            <Badge info style={styles.badgeLevels}>
               <Text>2 </Text>
             </Badge>
+            <Text note>within 0 - 20</Text>
           </Left>
           <Right>
             <Icon name="arrow-forward" />
@@ -76,10 +78,11 @@ export default class LevelsList extends Component {
 
         <CardItem bordered style={styles.levelList}>
           <Left>
-            <Text>Level</Text>
-            <Badge primary style={styles.badgeLevels}>
+            <H2>Level</H2>
+            <Badge info style={styles.badgeLevels}>
               <Text>3 </Text>
             </Badge>
+            <Text note>within 0 - 20</Text>
           </Left>
           <Right>
             <Icon name="arrow-forward" />
@@ -87,10 +90,11 @@ export default class LevelsList extends Component {
         </CardItem>
         <CardItem bordered style={styles.levelList}>
           <Left>
-            <Text>Level</Text>
-            <Badge primary style={styles.badgeLevels}>
+            <H2>Level</H2>
+            <Badge info style={styles.badgeLevels}>
               <Text>4 </Text>
             </Badge>
+            <Text note>within 0 - 20</Text>
           </Left>
           <Right>
             <Icon name="arrow-forward" />
@@ -104,9 +108,9 @@ export default class LevelsList extends Component {
 const styles = StyleSheet.create({
   badgeLevels: {
     marginLeft: 10,
-    fontSize: 26,
+    fontSize: 22,
     color: '#fff',
-    lineHeight: 26,
+    lineHeight: 30,
   },
   levelList: {
     paddingBottom: 20,

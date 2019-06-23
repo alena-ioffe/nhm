@@ -11,7 +11,7 @@ import {
   Input,
   Label,
 } from 'native-base';
-import CountDown from 'react-native-countdown-component';
+import CountDown60 from './utils/CountDown';
 import { Actions } from 'react-native-router-flux';
 
 export default class FormGen extends Component {
@@ -22,24 +22,9 @@ export default class FormGen extends Component {
         style={{ width: '100%', height: '100%' }}
       >
         <Card style={styles.cardContainer}>
-          <CardItem header bordered style={{ backgroundColor: '#59B8A5' }}>
+          <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
             <Text style={styles.header}>Time : </Text>
-            <CountDown
-              until={5}
-              onFinish={() => Actions.Result()}
-              digitStyle={{
-                backgroundColor: '#59B8A5',
-                borderWidth: 2,
-                borderColor: '#ffff',
-              }}
-              digitTxtStyle={{ color: '#fff' }}
-              timeToShow={['M', 'S']}
-              timeLabels={{ m: null, s: null }}
-              showSeparator
-              size={20}
-              timeLabelStyle={{ color: '#fff', fontWeight: 'bold' }}
-              separatorStyle={{ color: '#fff' }}
-            />
+            <CountDown60 />
           </CardItem>
           <Form>
             <Item>
@@ -58,12 +43,6 @@ export default class FormGen extends Component {
 }
 
 const styles = StyleSheet.create({
-  badgeLevels: {
-    marginLeft: 10,
-    fontSize: 20,
-    color: '#fff',
-    lineHeight: 24,
-  },
   levelList: {
     paddingBottom: 20,
     paddingTop: 20,
@@ -78,6 +57,6 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 30,
+    marginTop: 100,
   },
 });

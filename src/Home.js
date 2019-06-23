@@ -15,7 +15,7 @@ export default class Home extends Component {
           <Content padder>
             <LevelsList />
           </Content>
-          <FooterTabsComp />
+          {/* <FooterTabsComp /> */}
         </ImageBackground>
       </Container>
     );

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Footer, FooterTab, Button, Icon, Text, Badge } from 'native-base';
+import { Actions } from 'react-native-router-flux';
+
 export default class FooterTabsComp extends Component {
   render() {
     return (
@@ -12,11 +14,15 @@ export default class FooterTabsComp extends Component {
             <Icon name="apps" />
             <Text>Levels</Text>
           </Button>
-          {/* <Button vertical>
-            <Icon name="camera" />
-            <Text>Camera</Text>
-          </Button> */}
-          <Button active badge vertical>
+
+          <Button
+            active
+            badge
+            vertical
+            onPress={() => {
+              Actions.Home();
+            }}
+          >
             <Badge warning>
               <Text>51</Text>
             </Badge>

@@ -11,7 +11,7 @@ export default class LevelK extends Component {
         style={{ width: '100%', height: '100%' }}
       >
         <Card style={styles.cardContainer}>
-          <CardItem header bordered style={{ backgroundColor: '#59B8A5' }}>
+          <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
             <Text style={styles.header}>add and subtract 0 - 10</Text>
           </CardItem>
 
@@ -20,10 +20,10 @@ export default class LevelK extends Component {
               <Text>You can do it. You have One minute</Text>
             </Left>
           </CardItem>
-          <CardItem bordered style={styles.levelList} />
+          <CardItem style={styles.levelList} />
           <Button
             full
-            style={{ backgroundColor: '#BD64A7' }}
+            style={styles.buttonGo}
             onPress={() => Actions.FormGen()}
             title="MATH"
           >
@@ -36,12 +36,6 @@ export default class LevelK extends Component {
 }
 
 const styles = StyleSheet.create({
-  badgeLevels: {
-    marginLeft: 10,
-    fontSize: 20,
-    color: '#fff',
-    lineHeight: 24,
-  },
   levelList: {
     paddingBottom: 20,
     paddingTop: 20,
@@ -56,6 +50,10 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 30,
+    marginTop: 100,
+  },
+  buttonGo: {
+    backgroundColor: '#BD64A7',
+    margin: 20,
   },
 });
