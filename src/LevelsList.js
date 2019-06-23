@@ -12,7 +12,7 @@ import {
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
-export default class CardListExample extends Component {
+export default class LevelsList extends Component {
   render() {
     return (
       <Card style={styles.cardContainer}>
@@ -47,7 +47,14 @@ export default class CardListExample extends Component {
             </Badge>
           </Left>
           <Right>
-            <Icon name="arrow-forward" />
+            <Button
+              transparent
+              onPress={() => {
+                Actions.FormGen();
+              }}
+            >
+              <Icon name="arrow-forward" />
+            </Button>
           </Right>
         </CardItem>
 

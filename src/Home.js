@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { ImageBackground } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { Container, Content } from 'native-base';
 import FooterTabsComp from './Footer';
-import CardListExample from './CardList';
+import LevelsList from './LevelsList';
 
 export default class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ export default class Home extends Component {
           style={{ width: '100%', height: '100%' }}
         >
           <Content padder>
-            <CardListExample />
+            <LevelsList />
           </Content>
           <FooterTabsComp />
         </ImageBackground>
@@ -21,3 +21,10 @@ export default class Home extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  imgBg: {
+    width: '100%',
+    height: '100%',
+  },
+});
