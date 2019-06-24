@@ -13,9 +13,9 @@ import {
 } from 'native-base';
 import CountDown60 from '../utils/CountDown';
 
-const numbers = () => {
-  return [...Array(10).keys()].map(x => x++);
-};
+// const numbers = () => {
+//   return [...Array(10).keys()].map(x => x++);
+// };
 
 export default class FormGen extends Component {
   constructor(props) {
@@ -71,6 +71,7 @@ export default class FormGen extends Component {
   //     correctAnswer: `type of ${this.output1}`,
   //   });
   // }
+
   componentDidMount() {
     this.makeQuestion();
   }
