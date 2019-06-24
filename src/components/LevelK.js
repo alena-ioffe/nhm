@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ImageBackground, StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet, Image } from 'react-native';
 import { Card, CardItem, Text, H3, Left, Button } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -14,11 +14,14 @@ export default class LevelK extends Component {
           <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
             <Text style={styles.header}>add and subtract 0 - 10</Text>
           </CardItem>
-
           <CardItem bordered style={styles.levelList}>
             <Left>
-              <H3>You can do it! You have 1 minute</H3>
+              <H3>You can do it!</H3>
             </Left>
+            <Image
+              source={require('../../assets/crab-m.jpg')}
+              style={{ width: 180, height: 180 }}
+            />
           </CardItem>
           <CardItem style={styles.levelList} />
           <Button

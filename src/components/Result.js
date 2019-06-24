@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, ImageBackground } from 'react-native';
+import { StyleSheet, ImageBackground, Image } from 'react-native';
 import {
   Card,
   CardItem,
@@ -9,6 +9,7 @@ import {
   Container,
   Title,
   H3,
+  Right,
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import ConfettiCannon from 'react-native-confetti-cannon';
@@ -33,10 +34,14 @@ export default class Result extends Component {
               </Left>
             </CardItem>
             <CardItem bordered style={styles.levelList}>
-              <Left>
-                <Title>Total Points: 50</Title>
-              </Left>
+              <Image
+                source={require('../../assets/purple-m.jpg')}
+                style={{ width: 240, height: 200 }}
+              />
+
+              <Title>50 points</Title>
             </CardItem>
+
             <Button
               full
               style={styles.buttonPlayAgain}
