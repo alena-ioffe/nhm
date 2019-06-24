@@ -9,7 +9,8 @@ import {
   Form,
   Item,
   H3,
-  H2,
+  Icon,
+  Right,
 } from 'native-base';
 import CountDown60 from '../utils/CountDown';
 
@@ -31,6 +32,7 @@ export default class FormGen extends Component {
     this.randomNumber = this.randomNumber.bind(this);
     this.checkAnswer = this.randomNumber.bind(this);
     this.makeQuestion = this.makeQuestion.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
     // this.superFunc = this.superFunc.bind(this);
   }
 
@@ -48,18 +50,23 @@ export default class FormGen extends Component {
     });
   }
 
-  async checkAnswer(event) {
-    this.answer = parseInt(event.target.value, 10);
-    this.answer === this.state.correctAnswer
-      ? (this.message = 'correct')
-      : (this.message = 'oops');
-
-    await this.setState({
+  // checkAnswer(event) {
+  //   this.setState({
+  //     answer: parseInt(event.target.value, 10),
+  //   });
+  // }
+  sendMessage() {
+    let answer = parseInt(this.state.answer, 10);
+    let correctAnswer = parseInt(this.state.correctAnswer, 10);
+    if (answer !== correctAnswer) {
+      this.message = 'oops';
+    } else {
+      this.message = 'correct!';
+    }
+    this.setState({
       message: this.message,
-      answer: this.answer,
     });
   }
-
   // superFunc() {
   //   // this.correctAnswer = this.output1 + this.output2;
   //   this.checkAnswer();
@@ -97,13 +104,15 @@ export default class FormGen extends Component {
                 {this.state.output1} + {this.state.output2} =
               </Text>
 
-              <TextInput style={{ padding: 10, fontSize: 22 }} />
+              <TextInput
+                style={{ padding: 10, fontSize: 22 }}
+                onChangeText={event => this.setState({ answer: event })}
+              />
+              <Button iconLeft transparent primary onPress={this.sendMessage}>
+                <Icon name="paw" />
+              </Button>
 
-              <Text>
-                {/* {this.state.correctAnswer} */}
-                {this.state.answer}
-                {this.state.message}
-              </Text>
+              <Text style={{ paddingLeft: 85 }}>{this.state.message}</Text>
             </Item>
           </Form>
           {/* NUMBERS */}
@@ -192,16 +201,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
   },
 });
-
-//produce random 2 didgit math problem
-// append to the first text
-// capchure the answer
-
-//event listerner on input
-// compare the value of input
-// with captured answer
-// if there are uquqal, append correct to text
-// else append incorrect
-
-// clear input ??
-// make a append and capture(answer) a new random math

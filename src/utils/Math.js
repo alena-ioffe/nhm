@@ -23,8 +23,13 @@ function checkAnswer() {
   }
 }
 
-// onInput :
-//1) get input,
-// 2)chech with correct anwer
-// 3) return message
-// 4) generate new question
+//produce random 2 didgit math problem
+// set  output on state
+// capchure the answer
+
+//event listerner on input
+// compare the value of input with captured answer
+// if there are uquqal, append correct to text
+// else append incorrect
+
+// populate new out put
