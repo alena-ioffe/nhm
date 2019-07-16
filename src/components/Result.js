@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 150,
+    marginTop: '45%',
   },
   buttonPlayAgain: {
     backgroundColor: '#BD64A7',

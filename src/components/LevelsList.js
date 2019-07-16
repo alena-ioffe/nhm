@@ -126,6 +126,6 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 100,
+    marginTop: '45%',
   },
 });
