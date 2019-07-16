@@ -63,10 +63,10 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   header: {
-    paddingBottom: 15,
-    paddingTop: 15,
+    paddingBottom: 10,
+    paddingTop: 10,
     color: '#fff',
-    fontSize: 24,
+    fontSize: 22,
     letterSpacing: 2,
   },
   cardContainer: {

@@ -114,18 +114,18 @@ const styles = StyleSheet.create({
   },
   levelList: {
     paddingBottom: 20,
-    paddingTop: 20,
+    paddingTop: 15,
   },
   header: {
-    paddingBottom: 15,
-    paddingTop: 15,
+    paddingBottom: 10,
+    paddingTop: 10,
     color: '#fff',
-    fontSize: 24,
+    fontSize: 22,
     letterSpacing: 2,
   },
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 150,
+    marginTop: 100,
   },
 });

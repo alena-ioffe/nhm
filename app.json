@@ -4,11 +4,8 @@
     "slug": "MathTime",
     "privacy": "public",
     "sdkVersion": "33.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "description": "Mobile app for kids to practice No Hesitation Math, grades K-5. The user has given 60 seconds to solve 24-30 problems.Users select a level and are given types of problem-based on grade. Awarded Best Tool for Educator and Teachers",
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,9 +17,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }
