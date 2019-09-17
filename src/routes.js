@@ -28,7 +28,7 @@ export default class Routes extends Component {
               title="Levels"
               icon={() => (
                 <Icon
-                  style={{ width: 30, height: 30 }}
+                  style={{ width: 30, height: 30, paddingTop: 3 }}
                   name="rocket"
                   size={16}
                 />
@@ -44,7 +44,11 @@ export default class Routes extends Component {
               key="Account"
               title="Account"
               icon={() => (
-                <Icon style={{ width: 30, height: 30 }} name="star" size={16} />
+                <Icon
+                  style={{ width: 30, height: 30, paddingTop: 3 }}
+                  name="star"
+                  size={16}
+                />
               )}
             >
               <Scene key="Login" component={Login} title="Account" hideNavBar />

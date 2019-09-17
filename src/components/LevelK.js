@@ -11,8 +11,8 @@ export default class LevelK extends Component {
         style={styles.imgBg}
       >
         <Card style={styles.cardContainer}>
-          <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
-            <Text style={styles.header}>add and subtract 0 - 10</Text>
+          <CardItem style={styles.header}>
+            <Text style={styles.headerText}>Add and Subtract 0 - 10</Text>
           </CardItem>
           <CardItem bordered style={styles.levelList}>
             <Left>
@@ -23,7 +23,6 @@ export default class LevelK extends Component {
               style={{ width: 180, height: 180 }}
             />
           </CardItem>
-          <CardItem style={styles.levelList} />
           <Button
             full
             style={styles.buttonGo}
@@ -41,9 +40,14 @@ export default class LevelK extends Component {
 const styles = StyleSheet.create({
   levelList: {
     paddingBottom: 10,
-    paddingTop: 10,
+    paddingTop: 100,
   },
   header: {
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    backgroundColor: '#62BFE6',
+  },
+  headerText: {
     paddingBottom: 10,
     paddingTop: 10,
     color: '#fff',
@@ -53,7 +57,8 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: '45%',
+    marginTop: '27%',
+    borderRadius: 15,
   },
   buttonGo: {
     backgroundColor: '#BD64A7',
