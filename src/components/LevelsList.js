@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: '45%',
     borderRadius: 15,
+    marginTop: '35%',
   },
 });

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ImageBackground, StyleSheet, Image } from 'react-native';
-import { Card, CardItem, Text, H3, Left, Button } from 'native-base';
+import { Card, CardItem, Text, Title, H3, Left, Button } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 export default class LevelK extends Component {
@@ -12,15 +12,26 @@ export default class LevelK extends Component {
       >
         <Card style={styles.cardContainer}>
           <CardItem style={styles.header}>
-            <Text style={styles.headerText}>Add and Subtract 0 - 10</Text>
+            <Text style={styles.headerText}>'+' , '-' 0 ... 10</Text>
+          </CardItem>
+          <CardItem style={styles.levelList}>
+            <Title>Example: </Title>
+          </CardItem>
+          <CardItem style={styles.levelList}>
+            <Title>3 + 5 = </Title>
+          </CardItem>
+          <CardItem style={styles.levelList}>
+            <Title>0 + 2 = </Title>
           </CardItem>
           <CardItem bordered style={styles.levelList}>
-            <Left>
-              <H3>You can do it!</H3>
-            </Left>
             <Image
               source={require('../../assets/crab-m.jpg')}
-              style={{ width: 180, height: 180 }}
+              style={{
+                width: 180,
+                height: 180,
+                marginLeft: '37%',
+                marginTop: -70,
+              }}
             />
           </CardItem>
           <Button
@@ -29,7 +40,7 @@ export default class LevelK extends Component {
             onPress={() => Actions.FormGen()}
             title="MATH"
           >
-            <Text>Ready Set G0 </Text>
+            <Text>START</Text>
           </Button>
         </Card>
       </ImageBackground>
@@ -40,7 +51,7 @@ export default class LevelK extends Component {
 const styles = StyleSheet.create({
   levelList: {
     paddingBottom: 10,
-    paddingTop: 100,
+    paddingTop: 10,
   },
   header: {
     borderTopLeftRadius: 15,
@@ -57,7 +68,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: '27%',
+    marginTop: '20%',
     borderRadius: 15,
   },
   buttonGo: {
