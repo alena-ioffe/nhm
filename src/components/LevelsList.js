@@ -19,31 +19,40 @@ export default class LevelsList extends Component {
   render() {
     return (
       <Card style={styles.cardContainer}>
-        <CardItem header bordered style={{ backgroundColor: '#59B8A5' }}>
-          <Text style={styles.header}>Choose Challenge</Text>
+        <CardItem style={styles.header}>
+          <Text style={styles.headerText}>Choose Level</Text>
         </CardItem>
 
-        <CardItem bordered style={styles.levelList}>
+        <CardItem
+          button
+          transparent
+          onPress={() => {
+            Actions.LevelK();
+          }}
+          bordered
+          style={styles.levelList}
+        >
           <Left>
             <H2>Level</H2>
             <Badge info style={styles.badgeLevels}>
-              <Text>K</Text>
+              <Text>K </Text>
             </Badge>
             <Text note>within 0 - 10</Text>
           </Left>
           <Right>
-            <Button
-              transparent
-              onPress={() => {
-                Actions.LevelK();
-              }}
-            >
-              <Icon name="arrow-forward" />
-            </Button>
+            <Icon name="arrow-forward" />
           </Right>
         </CardItem>
 
-        <CardItem bordered style={styles.levelList}>
+        <CardItem
+          button
+          transparent
+          onPress={() => {
+            Actions.LevelK();
+          }}
+          bordered
+          style={styles.levelList}
+        >
           <Left>
             <H2>Level</H2>
             <Badge info style={styles.badgeLevels}>
@@ -52,14 +61,7 @@ export default class LevelsList extends Component {
             <Text note>within 0 - 20</Text>
           </Left>
           <Right>
-            <Button
-              transparent
-              onPress={() => {
-                Actions.LevelK();
-              }}
-            >
-              <Icon name="arrow-forward" />
-            </Button>
+            <Icon name="arrow-forward" />
           </Right>
         </CardItem>
 
@@ -88,7 +90,7 @@ export default class LevelsList extends Component {
             <Icon name="arrow-forward" />
           </Right>
         </CardItem>
-        <CardItem bordered style={styles.levelList}>
+        <CardItem style={styles.levelListLast}>
           <Left>
             <H2>Level</H2>
             <Badge info style={styles.badgeLevels}>
@@ -116,7 +118,18 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingTop: 15,
   },
+  levelListLast: {
+    paddingBottom: 20,
+    paddingTop: 15,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+  },
   header: {
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    backgroundColor: '#59B8A5',
+  },
+  headerText: {
     paddingBottom: 10,
     paddingTop: 10,
     color: '#fff',
@@ -126,6 +139,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 100,
+    borderRadius: 15,
+    marginTop: '35%',
   },
 });

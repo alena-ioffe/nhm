@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 150,
+    marginTop: '35%',
+    borderRadius: 20,
   },
   buttonLogin: {
     marginTop: 30,

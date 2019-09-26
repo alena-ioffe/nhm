@@ -5,7 +5,6 @@ import { Home, LevelK, FormGen, Result, Login } from './components/index';
 import { Icon } from 'native-base';
 
 export default class Routes extends Component {
-  
   render() {
     return (
       <Router>
@@ -22,16 +21,16 @@ export default class Routes extends Component {
             }}
             showIcon
             showLabel
-            tabBarStyle={{ backgroundColor: '#FFFFFF', height: 70 }}
+            tabBarStyle={{ backgroundColor: '#FFFFFF', height: 50 }}
           >
             <Scene
               key="Levels"
               title="Levels"
               icon={() => (
                 <Icon
-                  style={{ width: 30, height: 30 }}
+                  style={{ width: 30, height: 30, paddingTop: 3 }}
                   name="rocket"
-                  size={20}
+                  size={16}
                 />
               )}
             >
@@ -45,7 +44,11 @@ export default class Routes extends Component {
               key="Account"
               title="Account"
               icon={() => (
-                <Icon style={{ width: 30, height: 30 }} name="star" size={20} />
+                <Icon
+                  style={{ width: 30, height: 30, paddingTop: 3 }}
+                  name="star"
+                  size={16}
+                />
               )}
             >
               <Scene key="Login" component={Login} title="Account" hideNavBar />

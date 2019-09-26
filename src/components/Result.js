@@ -24,13 +24,13 @@ export default class Result extends Component {
           style={styles.imgBg}
         >
           <Card style={styles.cardContainer}>
-            <CardItem header bordered style={{ backgroundColor: '#62BFE6' }}>
-              <Text style={styles.header}>Hooray 24/24</Text>
+            <CardItem style={styles.header}>
+              <Text style={styles.headerText}>Awesome job!</Text>
             </CardItem>
 
             <CardItem bordered style={styles.levelList}>
               <Left>
-                <H3>Awesome job!</H3>
+                <H3>score: 24/24</H3>
               </Left>
             </CardItem>
             <CardItem bordered style={styles.levelList}>
@@ -38,8 +38,6 @@ export default class Result extends Component {
                 source={require('../../assets/purple-m.jpg')}
                 style={{ width: 240, height: 200 }}
               />
-
-              <Title>50 points</Title>
             </CardItem>
 
             <Button
@@ -63,6 +61,11 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   header: {
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    backgroundColor: '#62BFE6',
+  },
+  headerText: {
     paddingBottom: 10,
     paddingTop: 10,
     color: '#fff',
@@ -72,7 +75,8 @@ const styles = StyleSheet.create({
   cardContainer: {
     marginLeft: 30,
     marginRight: 30,
-    marginTop: 150,
+    marginTop: '35%',
+    borderRadius: 15,
   },
   buttonPlayAgain: {
     backgroundColor: '#BD64A7',
