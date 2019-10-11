@@ -5,7 +5,8 @@ Mobile app for kids to practice No Hesitation Math, grades K-5.
 * Users select a level and are given types of problem-based on grade. 
 * Awarded Best Tool for Educator and Teachers
 
-![](screen-shot.png)
+
+<img src="assets/screen-shot.png" alt="app" width="300"/>
 
 [Published version](https://exp.host/@alenai/MathTime)
 
